@@ -96,7 +96,7 @@ service-worker: true
 
 
 
-# 友情链接，请尽量不要删除，谢谢！
+# 友情链接
 friends: [
     {
         title: "My Blog On Gitee(Chinese)",
