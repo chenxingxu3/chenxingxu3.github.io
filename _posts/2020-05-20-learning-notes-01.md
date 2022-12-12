@@ -1,31 +1,31 @@
 ---
 layout:     post
-title:      Oracle数据库学习笔记（一）
-subtitle:   搭建服务端运行环境
+title:      Oracle Database Learning Notes (I)
+subtitle:   Build server-side runtime environment
 date:       2020-05-20
-author:     java阳旭
+author:     Chen Xingxu
 header-img: img/post-bg-road.jpg
 catalog:    true
 tags:
     - Oracle
 ---
 
-# 概述
+# Overview
 
-本人搭建 Oracle 数据库所使用的操作系统环境为 Windows XP SP3 ，虚拟机采用的是  VMware Workstation 。
+The operating system environment I use to build Oracle database is Windows XP SP3, and the virtual machine used is VMware Workstation.
 
-# 前期准备
+# Preliminary Preparation
 
 1. VMware Workstation （https://www.vmware.com/cn/products/workstation-pro/workstation-pro-evaluation.html）
-2. Windows XP SP3 镜像文件 （https://msdn.itellyou.cn/）
+2. Windows XP SP3 ISO file （https://msdn.itellyou.cn/）
 
-# 搭建过程
+# Building process
 
-1、找到 文件 -> 新建虚拟机
+1、File -> New Virtual Machine. 
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_160914.134](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_160914.134.jpg)
 
-2、“新建虚拟机向导”启动后，依次按照下图一步步设置即可。
+2、After the "New Virtual Machine Wizard" starts, just follow the step-by-step settings in the following diagram.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_160919.298](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_160919.298.jpg)
 
@@ -35,57 +35,57 @@ tags:
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161036.328](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161036.328.jpg)
 
-下图的设置保持默认也可以，也可以按照自己的偏好进行设置。本人是按照自己的偏好进行设置的。
+The settings below can be left as default, or you can set them according to your own preferences. I set the settings according to my own preferences.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161046.224](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161046.224.jpg)
 
-点击“自定义硬件”。
+Click on "Customize Hardware".
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161050.420](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161050.420.jpg)
 
-在左侧选择“新 CD/DVD(IDE) ”，在右侧点选“使用 ISO 映像文件”，点击“浏览”，选择 Windows XP 的映像文件。然后点击下方的“关闭”，关闭本窗口。
+Select "New CD/DVD (IDE)" on the left, click "Use ISO image file" on the right, click "Browse" and select the image file for Windows XP. Then click "Close" at the bottom to close this window.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161112.490](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161112.490.jpg)
 
-点击“完成”即可。
+Just click "Finish".
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161127.867](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161127.867.jpg)
 
-3、虚拟机新建完成后，依次按照下图的步骤安装操作系统。
+3. After the virtual machine is newly created, follow the steps in the figure below to install the operating system in turn.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161133.321](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161133.321.jpg)
 
-按 C 键进行磁盘分区。
+Press the C key to partition the disc.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161201.009](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161201.009.jpg)
 
-开发和学习用途的话，分一个区就行，直接回车即可。
+For development and learning purposes, just divide it into one section and enter it directly.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161207.320](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161207.320.jpg)
 
-直接回车，开始安装系统。
+Enter directly to start the system installation.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161211.721](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161211.721.jpg)
 
-因为是虚拟机，不是真实硬件，按下图选择带“快”字的选项进行格式化即可。
+Because it is a virtual machine, not real hardware, you can format it by selecting the option with the word "fast" as shown below.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161219.179](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161219.179.jpg)
 
-耐心等待安装完成。
+Wait patiently for the installation to complete.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161239.648](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161239.648.jpg)
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161258.402](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161258.402.jpg)
 
-4、系统安装完成后，按下图的步骤安装 VMware Tools 。找到自己搭建好的虚拟机，右键，选择“安装 VMware Tools”。
+4、After the system installation is complete, follow the steps in the diagram below to install VMware Tools. Find the virtual machine you have built, right-click on it, and select "Install VMware Tools".
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161506.012](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161506.012.jpg)
 
-打开“我的电脑”，即可看到下图所示的 VMware Tools ，双击进行安装。
+Open "My Computer" and you will see VMware Tools as shown below.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161512.860](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161512.860.jpg)
 
-保持默认，无脑下一步即可。
+Keep the default, Next->Next->... until the end.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161517.012](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161517.012.jpg)
 
@@ -97,39 +97,39 @@ tags:
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161555.468](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161555.468.jpg)
 
-安装完成后，选择”是“，重启虚拟机。
+When the installation is complete, select "Yes" and restart the virtual machine.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161610.257](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161610.257.jpg)
 
-# 性能优化（可选）
+# Performance optimization (optional)
 
-可以参考下面的做法，提升虚拟机中 Windows XP 的运行效率。
+You can refer to the following practices to improve the operation efficiency of Windows XP in the virtual machine.
 
-1、在桌面上点击鼠标右键，选择”属性“。
+1、Click the right mouse button on the desktop and select "Properties".
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161657.751](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161657.751.jpg)
 
-2、选择 Windows 经典 主题。点击下方的”确定“按钮完成设置。
+2、Select the Windows Classic theme. Click the "OK" button below to complete the settings.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161708.272](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161708.272.jpg)
 
-3、在”我的电脑“上点击鼠标右键，选择”属性“。
+3、Right click on "My Computer" and select "Properties".
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161717.874](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161717.874.jpg)
 
-4、进入”高级“选项卡，点击 性能 中的”设置“按钮。
+4、Go to the "Advanced" tab and click the "Settings" button in Performance.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161726.146](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161726.146.jpg)
 
-5、点选”调整为最佳性能“。点击下方的”确定“按钮完成设置。
+5、Click on "Adjust for best performance". Click the "OK" button below to complete the settings.
 
 ![bandicam 2020-05-20 11-48-03-277.mp4_20200520_161729.010](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 11-48-03-277.mp4_20200520_161729.010.jpg)
 
-# 关闭防火墙
+# Turn off the firewall
 
-为了方便开发，建议将防火墙关闭。
+To facilitate development, it is recommended that the firewall be turned off.
 
 ![bandicam 2020-05-20 17-47-08-523.mp4_20200520_201425.164](/img-post/2020-05-20-learning-notes-01/bandicam 2020-05-20 17-47-08-523.mp4_20200520_201425.164.jpg)
 
-至此，完成了搭建服务端运行环境的工作。
+This completes the work of building the server-side runtime environment.
 

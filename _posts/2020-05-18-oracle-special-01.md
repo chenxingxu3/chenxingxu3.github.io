@@ -1,70 +1,70 @@
 ---
 layout:     post
-title:      Maven丨使用IDEA将本地的ojdbc14.Jar包添加到个人仓库中
-subtitle:   Maven丨使用IDEA将本地的ojdbc14.Jar包添加到个人仓库中
+title:      Maven丨Use IDEA to add the local ojdbc14.Jar package to your personal repository
+subtitle:   Maven丨Use IDEA to add the local ojdbc14.Jar package to your personal repository
 date:       2020-05-18
-author:     java阳旭
+author:     Chen Xingxu
 header-img: img/post-bg-road.jpg
 catalog:    true
 tags:
     - Oracle
 ---
-# Maven丨使用IDEA将本地的ojdbc14.Jar包添加到个人仓库中
+# Maven丨Use IDEA to add the local ojdbc14.Jar package to your personal repository
 
-在学习 Oracle 数据库的过程中，使用 IntelliJ IDEA 创建了一个 Maven 工程，但是在 pom.xml 中添加 ojdbc14 依赖后，提示如下错误：
+In the process of learning Oracle database, I created a Maven project using IntelliJ IDEA, but after adding the ojdbc14 dependency in pom.xml, the following error was prompted:
 
 Could not find artifact com.oracle.jdbc:ojdbc14:pom:10.2.0.1.0 in central (https://repo.maven.apache.org/maven2)
 
-原因是由于 ojdbc 是收费的，所以无法从远程仓库中获取，获取 ojdbc14 需要从本地类库获取。知道了原因所在，那么解决此问题的思路就有了。
+The reason is that since ojdbc is paid, it cannot be fetched from the remote repository, and getting ojdbc14 requires getting it from the local class library. Once you know what the reason is, then you have an idea to solve this problem.
 
-解决方法：
+Solution.
 
-1. 下载 ojdbc14.jar 包
-2. 使用 IDEA 将本地的 Jar 包添加到个人的 Maven 仓库中
-3. 在 pom.xml 文件中添加依赖
+1. download the ojdbc14.jar package
+2. Use IDEA to add the local Jar package to your personal Maven repository
+3. add the dependencies in the pom.xml file
 
-**1、下载 ojdbc14.jar 包**
+**1、Download ojdbc14.jar package**
 
 https://306t.com/file/23243704-443891502
-访问密码 665159
+Access Password 665159
 
-**2、使用 IDEA 将本地的 Jar 包添加到个人的 Maven 仓库中**
+**2、Use IDEA to add local Jar packages to your personal Maven repository**
 
-（1）点击 IDEA 右侧的 Maven 按钮
+（1）Click on the Maven button on the right side of IDEA
 
 ![Snipaste_2020-05-18_08-55-04](/img-post/2020-05-18-oracle-special-01/Snipaste_2020-05-18_08-55-04.jpg)
 
-（2）点击 Execute Maven Goal 按钮
+（2）Click the Execute Maven Goal button
 
 ![Snipaste_2020-05-18_08-57-42](/img-post/2020-05-18-oracle-special-01/Snipaste_2020-05-18_08-57-42.jpg)
 
-（3）在出现的 Run Anything 中 写入 Maven Goal
+（3）Write Maven Goal in the Run Anything that appears
 
 ![Snipaste_2020-05-18_09-01-15](/img-post/2020-05-18-oracle-special-01/Snipaste_2020-05-18_09-01-15.jpg)
 
-maven goal 的格式如下（符号："<>" 运行时去掉, -D 前面一定要有空格）：
+The format of the maven goal is as follows（The symbol: "<>" is removed at runtime, -D must be preceded by a space）：
 
 ```xml
-install:install-file -Dfile=<Jar包的地址> 
-                     -DgroupId=<Jar包的GroupId> 
-                     -DartifactId=<Jar包的引用名称> 
-                     -Dversion=<Jar包的版本> 
-                     -Dpackaging=<Jar的打包方式>
+install:install-file -Dfile=<Address of the Jar package> 
+                     -DgroupId=<GroupId of the Jar package> 
+                     -DartifactId=<Reference name of Jar package> 
+                     -Dversion=<Versions of the Jar package> 
+                     -Dpackaging=<Jar's packaging method>
 ```
 
-我写的例子如下，仅供参考：
+I have written the following example for reference only: 
 
 ```xml
 mvn install:install-file -Dfile=D:/jar/ojdbc14.jar -DgroupId=com.oracle.jdbc -DartifactId=ojdbc14 -Dversion=10.2.0.1.0 -Dpackaging=jar
 ```
 
-填写完成后回车即可执行。当出现如下图的信息，说明部署安装成功：
+Fill in the fields and enter to execute. When the following message appears, the deployment is successfully installed: 
 
 ![Snipaste_2020-05-18_09-04-37](/img-post/2020-05-18-oracle-special-01/Snipaste_2020-05-18_09-04-37.jpg)
 
-**3、在Pom.xml文件中添加依赖**
+**3、Add dependencies in the Pom.xml file**
 
-我写的例子如下，仅供参考：
+I have written the following example for reference only.
 
 ```xml
 <dependency>
