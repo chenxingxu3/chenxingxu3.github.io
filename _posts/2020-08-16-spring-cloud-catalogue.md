@@ -1,169 +1,182 @@
 ---
 layout:     post
-title:      Spring Cloud学习笔记
-subtitle:   汇总目录及Gitee地址
+title:      01.SpringCloud学习笔记
+subtitle:   Boot和Cloud版本选择
 date:       2020-08-16
-author:     java阳旭
+author:     Chen Xingxu
 header-img: img/post-bg-road.jpg
 catalog:    true
 tags:
     - SpringCloud
 ---
-# Spring Cloud学习笔记汇总目录及Gitee地址
-
-## Gitee地址
-
-[https://gitee.com/telyfox/SpringCloudDemo20200816](https://gitee.com/telyfox/SpringCloudDemo20200816)
-
-## Spring Cloud Alibaba 学习笔记
-
- [16.Spring Cloud Alibaba学习笔记--Seata案例--原理](https://java2016.blog.csdn.net/article/details/108040242)
-
-
-
- [15.Spring Cloud Alibaba学习笔记--Seata案例--测试](https://java2016.blog.csdn.net/article/details/108028620)
-
-
-
- [14.Spring Cloud Alibaba学习笔记--Seata案例--帐户](https://java2016.blog.csdn.net/article/details/108028566)
-
-
-
- [13.Spring Cloud Alibaba学习笔记--Seata案例--库存](https://java2016.blog.csdn.net/article/details/108028545)
-
-
-
- [12.Spring Cloud Alibaba学习笔记--Seata案例--订单](https://java2016.blog.csdn.net/article/details/108028477)
-
-
-
- [11.Spring Cloud Alibaba学习笔记--Seata简介及安装方法](https://java2016.blog.csdn.net/article/details/108028403)
-
-
-
- [10.Spring Cloud Alibaba学习笔记--Sentinel持久化规则](https://java2016.blog.csdn.net/article/details/107954548)
-
-
-
- [09.Spring Cloud Alibaba学习笔记--Sentinel服务熔断](https://java2016.blog.csdn.net/article/details/107954508)
-
-
-
- [08.Spring Cloud Alibaba学习笔记--@SentinelResource配置](https://java2016.blog.csdn.net/article/details/107954437)
-
-
-
- [07.Spring Cloud Alibaba学习笔记--Sentinel热点key限流及系统规则](https://java2016.blog.csdn.net/article/details/107926728)
-
-
-
- [06.Spring Cloud Alibaba学习笔记--Sentinel降级](https://java2016.blog.csdn.net/article/details/107898479)
-
-
-
- [05.Spring Cloud Alibaba学习笔记--Sentinel流控](https://java2016.blog.csdn.net/article/details/107884783)
-
-
-
- [04.Spring Cloud Alibaba学习笔记--Sentinel简介及安装配置](https://java2016.blog.csdn.net/article/details/107884731)
-
-
-
- [03.Spring Cloud Alibaba学习笔记--Nacos生产环境配置（Linux）](https://java2016.blog.csdn.net/article/details/107858981)
-
-
-
- [02.Spring Cloud Alibaba学习笔记--Nacos](https://java2016.blog.csdn.net/article/details/107849339)
-
-
-
- [01.Spring Cloud Alibaba学习笔记--简介](https://java2016.blog.csdn.net/article/details/107849218)
-
-## Spring Cloud 学习笔记
-
-[19.SpringCloud学习笔记--Sleuth分布式请求链路跟踪](https://java2016.blog.csdn.net/article/details/107790499)
-
-
-
-[18.SpringCloud学习笔记--Stream消息驱动](https://java2016.blog.csdn.net/article/details/107783955)
-
-
-
-[17.SpringCloud学习笔记--Bus消息总线](https://java2016.blog.csdn.net/article/details/107741095)
-
-
-
-[16.SpringCloud学习笔记--Config分布式配置中心](https://java2016.blog.csdn.net/article/details/107727920)
-
-
- [15.SpringCloud学习笔记--Gateway](https://java2016.blog.csdn.net/article/details/107705277)
-
-
-
-[14.SpringCloud学习笔记--Hystrix](https://java2016.blog.csdn.net/article/details/107660686)
-
-
-
-[13.SpringCloud学习笔记--OpenFeign](https://java2016.blog.csdn.net/article/details/107583862)
-
-
-
-[12.SpringCloud学习笔记--Ribbon](https://java2016.blog.csdn.net/article/details/107565850)
-
-
-
-[11.SpringCloud学习笔记--Consul](https://java2016.blog.csdn.net/article/details/107533710)
-
-
-
-[10.SpringCloud学习笔记--ZooKeeper](https://java2016.blog.csdn.net/article/details/107510390)
-
-
-
-[09.SpringCloud学习笔记--Eureka](https://java2016.blog.csdn.net/article/details/107460059)
-
-
-
-[08.SpringCloud学习笔记--工程重构](https://java2016.blog.csdn.net/article/details/107137771)
-
-
-
-[07.SpringCloud学习笔记--消费者订单模块](https://java2016.blog.csdn.net/article/details/107137764)
-
-
-
-[06.SpringCloud学习笔记--热部署Devtools](https://java2016.blog.csdn.net/article/details/107041334)
-
-
-
-[05.SpringCloud学习笔记--支付模块构建](https://java2016.blog.csdn.net/article/details/107041310)
-
-
-
-[04.SpringCloud学习笔记--父工程pom文件](https://java2016.blog.csdn.net/article/details/107041300)
-
-
-
-[03.SpringCloud学习笔记--父工程Project空间新建](https://java2016.blog.csdn.net/article/details/107041226)
-
-
-
- [02.SpringCloud学习笔记--Cloud相关组件的停更及替换](https://java2016.blog.csdn.net/article/details/107041173)
-
-
-
- [01.SpringCloud学习笔记--Boot和Cloud版本选择](https://java2016.blog.csdn.net/article/details/107041146)
-
-### 常见问题
-
-Q：我在手机端访问点击“展开全文”就弹出“前往CSDN APP阅读全文”，但是我又不方便下载 APP，还想看博文，有办法解决吗？
-
-A：可以点击下面的链接查看解决办法：
-
-[https://telyfox.gitee.io/2020/10/31/how-to-access-CSDN-by-mobile-phone/](https://telyfox.gitee.io/2020/10/31/how-to-access-CSDN-by-mobile-phone/)
-
-Q：我在 PC 端访问弹出“注册登录CSDN”，但是我又不方便注册，还想看博文，有办法解决吗？
-
-A：可以点击下面的链接查看解决办法：
-
-[https://telyfox.gitee.io/2020/10/31/how-to-access-CSDN-by-PC/](https://telyfox.gitee.io/2020/10/31/how-to-access-CSDN-by-PC/)
+# 01.SpringCloud学习笔记--Boot和Cloud版本选择
+
+## 官网相关链接
+
+### Spring Boot 
+
+**git 源码地址**
+
+https://github.com/spring-projects/spring-boot/releases
+
+**Spring Boot 2.0 Release Notes**
+
+https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Release-Notes
+
+通过此链接的内容，可以得知：
+
+> If you’re currently running with an earlier version of Spring Boot, we strongly recommend that you upgrade to Spring Boot 1.5 before migrating to Spring Boot 2.0.
+
+**官网地址**
+
+https://spring.io/projects/spring-boot
+
+### Spring Cloud
+
+**git 源码地址**
+
+https://github.com/spring-projects/spring-cloud
+
+**官网地址**
+
+https://spring.io/projects/spring-cloud
+
+## 版本选择
+
+### 依据
+
+| Release Train | Boot Version |
+| :------------ | :----------- |
+| Hoxton        | 2.2.x        |
+| Greenwich     | 2.1.x        |
+| Finchley      | 2.0.x        |
+| Edgware       | 1.5.x        |
+| Dalston       | 1.5.x        |
+
+参考：https://spring.io/projects/spring-cloud#overview
+
+```json
+{
+  "git": {
+    "branch": "c68416883aa87c01ec06e873c69509264d043cbe",
+    "commit": {
+      "id": "c684168",
+      "time": "2020-06-25T07:55:52Z"
+    }
+  },
+  "build": {
+    "version": "0.0.1-SNAPSHOT",
+    "artifact": "start-site",
+    "versions": {
+      "spring-boot": "2.3.1.RELEASE",
+      "initializr": "0.9.0.BUILD-SNAPSHOT"
+    },
+    "name": "start.spring.io website",
+    "time": "2020-06-25T13:30:32.867Z",
+    "group": "io.spring.start"
+  },
+  "bom-ranges": {
+    "azure": {
+      "2.0.10": "Spring Boot >=2.0.0.RELEASE and <2.1.0.RELEASE",
+      "2.1.10": "Spring Boot >=2.1.0.RELEASE and <2.2.0.M1",
+      "2.2.4": "Spring Boot >=2.2.0.M1 and <2.3.0.M1",
+      "2.3.1": "Spring Boot >=2.3.0.M1"
+    },
+    "codecentric-spring-boot-admin": {
+      "2.0.6": "Spring Boot >=2.0.0.M1 and <2.1.0.M1",
+      "2.1.6": "Spring Boot >=2.1.0.M1 and <2.2.0.M1",
+      "2.2.3": "Spring Boot >=2.2.0.M1"
+    },
+    "solace-spring-boot": {
+      "1.0.0": "Spring Boot >=2.2.0.RELEASE and <2.3.0.M1",
+      "1.1.0": "Spring Boot >=2.3.0.M1"
+    },
+    "solace-spring-cloud": {
+      "1.0.0": "Spring Boot >=2.2.0.RELEASE and <2.3.0.M1"
+    },
+    "spring-cloud": {
+      "Finchley.M2": "Spring Boot >=2.0.0.M3 and <2.0.0.M5",
+      "Finchley.M3": "Spring Boot >=2.0.0.M5 and <=2.0.0.M5",
+      "Finchley.M4": "Spring Boot >=2.0.0.M6 and <=2.0.0.M6",
+      "Finchley.M5": "Spring Boot >=2.0.0.M7 and <=2.0.0.M7",
+      "Finchley.M6": "Spring Boot >=2.0.0.RC1 and <=2.0.0.RC1",
+      "Finchley.M7": "Spring Boot >=2.0.0.RC2 and <=2.0.0.RC2",
+      "Finchley.M9": "Spring Boot >=2.0.0.RELEASE and <=2.0.0.RELEASE",
+      "Finchley.RC1": "Spring Boot >=2.0.1.RELEASE and <2.0.2.RELEASE",
+      "Finchley.RC2": "Spring Boot >=2.0.2.RELEASE and <2.0.3.RELEASE",
+      "Finchley.SR4": "Spring Boot >=2.0.3.RELEASE and <2.0.999.BUILD-SNAPSHOT",
+      "Finchley.BUILD-SNAPSHOT": "Spring Boot >=2.0.999.BUILD-SNAPSHOT and <2.1.0.M3",
+      "Greenwich.M1": "Spring Boot >=2.1.0.M3 and <2.1.0.RELEASE",
+      "Greenwich.SR6": "Spring Boot >=2.1.0.RELEASE and <2.1.16.BUILD-SNAPSHOT",
+      "Greenwich.BUILD-SNAPSHOT": "Spring Boot >=2.1.16.BUILD-SNAPSHOT and <2.2.0.M4",
+      "Hoxton.SR6": "Spring Boot >=2.2.0.M4 and <2.3.2.BUILD-SNAPSHOT",
+      "Hoxton.BUILD-SNAPSHOT": "Spring Boot >=2.3.2.BUILD-SNAPSHOT and <2.4.0.M1",
+      "2020.0.0-SNAPSHOT": "Spring Boot >=2.4.0.M1"
+    },
+    "spring-cloud-alibaba": {
+      "2.2.1.RELEASE": "Spring Boot >=2.2.0.RELEASE and <2.3.0.M1"
+    },
+    "spring-cloud-services": {
+      "2.0.3.RELEASE": "Spring Boot >=2.0.0.RELEASE and <2.1.0.RELEASE",
+      "2.1.7.RELEASE": "Spring Boot >=2.1.0.RELEASE and <2.2.0.RELEASE",
+      "2.2.3.RELEASE": "Spring Boot >=2.2.0.RELEASE and <2.3.0.M1"
+    },
+    "spring-statemachine": {
+      "2.0.0.M4": "Spring Boot >=2.0.0.RC1 and <=2.0.0.RC1",
+      "2.0.0.M5": "Spring Boot >=2.0.0.RC2 and <=2.0.0.RC2",
+      "2.0.1.RELEASE": "Spring Boot >=2.0.0.RELEASE"
+    },
+    "vaadin": {
+      "10.0.17": "Spring Boot >=2.0.0.M1 and <2.1.0.M1",
+      "14.2.2": "Spring Boot >=2.1.0.M1 and <2.4.0-M1"
+    },
+    "wavefront": {
+      "2.0.0-SNAPSHOT": "Spring Boot >=2.1.0.RELEASE"
+    }
+  },
+  "dependency-ranges": {
+    "okta": {
+      "1.2.1": "Spring Boot >=2.1.2.RELEASE and <2.2.0.M1",
+      "1.4.0": "Spring Boot >=2.2.0.M1 and <2.4.0-M1"
+    },
+    "mybatis": {
+      "2.0.1": "Spring Boot >=2.0.0.RELEASE and <2.1.0.RELEASE",
+      "2.1.3": "Spring Boot >=2.1.0.RELEASE and <2.4.0-M1"
+    },
+    "geode": {
+      "1.2.8.RELEASE": "Spring Boot >=2.2.0.M5 and <2.3.0.M1",
+      "1.3.0.RELEASE": "Spring Boot >=2.3.0.M1 and <2.4.0-M1"
+    },
+    "camel": {
+      "2.22.4": "Spring Boot >=2.0.0.M1 and <2.1.0.M1",
+      "2.25.1": "Spring Boot >=2.1.0.M1 and <2.2.0.M1",
+      "3.3.0": "Spring Boot >=2.2.0.M1 and <2.3.0.M1",
+      "3.4.0": "Spring Boot >=2.3.0.M1 and <2.4.0-M1"
+    },
+    "open-service-broker": {
+      "2.1.3.RELEASE": "Spring Boot >=2.0.0.RELEASE and <2.1.0.M1",
+      "3.0.4.RELEASE": "Spring Boot >=2.1.0.M1 and <2.2.0.M1",
+      "3.1.1.RELEASE": "Spring Boot >=2.2.0.M1 and <2.4.0-M1"
+    }
+  }
+}
+```
+
+参考：https://start.spring.io/actuator/info
+
+>Spring Cloud provides tools for developers to quickly build some of the common patterns in distributed systems (e.g. configuration management, service discovery, circuit breakers, intelligent routing, micro-proxy, control bus). Coordination of distributed systems leads to boiler plate patterns, and using Spring Cloud developers can quickly stand up services and applications that implement those patterns. They will work well in any distributed environment, including the developer’s own laptop, bare metal data centres, and managed platforms such as Cloud Foundry.
+>
+>Release Train Version: **Hoxton.SR1**
+>
+>Supported Boot Version: **2.2.2.RELEASE**
+
+参考：https://cloud.spring.io/spring-cloud-static/Hoxton.SR1/reference/htmlsingle/
+
+本笔记使用的版本
+
+- Cloud ----- Hoxton.SR1
+- Boot ----- 2.2.2.RELEASE
+- Cloud Alibaba ----- 2.1.0.RELEASE
+- Java ----- Java 8
+- MySQL ----- 5.7 及以上
+- Maven ----- 3.5 及以上
